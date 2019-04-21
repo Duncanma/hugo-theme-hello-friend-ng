@@ -1,9 +1,10 @@
 @import "normalize";
-@import "prism";
+//@import "prism";
+@import "chroma";
 
 @import "variables";
 @import "mixins";
-@import "fonts";
+//@import "fonts";
 @import "buttons";
 
 @import "header";
@@ -13,3 +14,4 @@
 @import "list";
 @import "single";
 @import "footer";
+@import "style";
