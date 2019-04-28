@@ -3,6 +3,10 @@ p.toc-heading {
     font-size: larger;
 }
 
+td, th {
+	padding:10px;
+}
+
 .note, .warning {
 	border-left-width: 4px;
 	border-left-style: solid;
