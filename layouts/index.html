@@ -9,5 +9,14 @@
                 </div>
             {{- end }}
         </div>
+        <h2>Recent Updates</h2>
+        <ol class="recent">
+            {{- range (first 3 .Pages) -}}     
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <!-- <div class="summary">{{.Summary}}</div> -->
+            </li>
+            {{- end -}}
+        </ol>
     </main>
 {{ end }}
