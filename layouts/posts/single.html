@@ -84,9 +84,13 @@
         {{ end }}
 
         {{ if .Params.comments }}
-          <div id="comments" class="thin">
+           <div id="comments" class="thin">
                 {{- partial "comments.html" . -}}
-            </div>
+           </div>
         {{ end }}
+
+        {{ if .Site.Params.showRelated }}
+        {{- partial "related.html" . -}}
+        {{end}}
     </main>
 {{ end }}
