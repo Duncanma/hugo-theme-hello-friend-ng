@@ -12,4 +12,11 @@
             </p>
         </div>
     </div>
+    <script>
+        var href = window.location.href;
+        var hrefLC = href.toLowerCase();
+        if (href != hrefLC) {
+            window.location.href = hrefLC;
+        }
+    </script>
 {{ end }}
