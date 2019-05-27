@@ -1,44 +1,19 @@
+/* roboto-regular - latin */
 @font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"),
-       url("../fonts/Inter-UI-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  italic;
-  font-weight: 400;
-  src: url("../fonts/Inter-UI-Italic.woff2") format("woff2"),
-       url("../fonts/Inter-UI-Italic.woff") format("woff");
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* source-code-pro-regular - latin */
 @font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
-  font-weight: 600;
-  src: url("../fonts/Inter-UI-Medium.woff2") format("woff2"),
-       url("../fonts/Inter-UI-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  italic;
-  font-weight: 600;
-  src: url("../fonts/Inter-UI-MediumItalic.woff2") format("woff2"),
-       url("../fonts/Inter-UI-MediumItalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
-  font-weight: 800;
-  src: url("../fonts/Inter-UI-Bold.woff2") format("woff2"),
-       url("../fonts/Inter-UI-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  italic;
-  font-weight: 800;
-  src: url("../fonts/Inter-UI-BoldItalic.woff2") format("woff2"),
-       url("../fonts/Inter-UI-BoldItalic.woff") format("woff");
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+       url('../fonts/source-code-pro-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/source-code-pro-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
