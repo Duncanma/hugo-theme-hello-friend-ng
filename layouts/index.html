@@ -11,7 +11,7 @@
         </div>
         <h2>Featured Posts</h2>
         <ol class="recent">
-            {{- range where .Pages "Params.featured" true -}}
+            {{- range where .Site.RegularPages "Params.featured" true -}}
             <li>
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 <!-- <div class="summary">{{.Summary}}</div> -->
