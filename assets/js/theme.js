@@ -1,9 +1,21 @@
 // Toggle theme
 
-const getTheme = window.localStorage && window.localStorage.getItem("theme");
+var getTheme = window.localStorage && window.localStorage.getItem("theme");
 const themeToggle = document.querySelector(".theme-toggle");
-const isDark = getTheme === "dark";
 var metaThemeColor = document.querySelector("meta[name=theme-color]");
+
+  //no theme specified, go with media preference. If no preference, go with dark
+if (getTheme === null) {
+  if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    getTheme = 'light';
+  }
+  else {
+    getTheme = 'dark';
+  }
+}
+
+const isDark = getTheme === "dark";
+
 
 if (getTheme !== null) {
   document.body.classList.toggle("dark-theme", isDark);
