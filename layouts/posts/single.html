@@ -24,7 +24,7 @@
             {{ end }}
 
             <div class="post-content">
-                {{ .Content }}
+                {{ .Content | partial "add-header-anchors" }}
             </div>
         </article>
         <hr />
