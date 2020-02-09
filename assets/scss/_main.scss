@@ -203,6 +203,13 @@ blockquote {
   }
 }
 
+ul.toc li {
+  @media (hover:none) {
+    font-size: 105%;
+    padding-bottom: 23px;
+  }
+}
+
 ul, ol {
   margin-left: 40px;
   padding: 0;
@@ -230,7 +237,7 @@ ol ol {
   flex: 1 auto;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;
+  margin: 10px 0;
 
   @media #{$media-size-phone} {
     margin-top: 0;
