@@ -9,7 +9,16 @@
                 </div>
             {{- end }}
         </div>
-        <h2>Featured Posts</h2>
+        <h2>Tech Posts</h2>
+        <ol class="recent">
+            {{- range where .Site.RegularPages "Params.techfeatured" true -}}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <!-- <div class="summary">{{.Summary}}</div> -->
+            </li>
+            {{- end -}}
+        </ol>
+        <h2>Other Recent Posts</h2>
         <ol class="recent">
             {{- range where .Site.RegularPages "Params.featured" true -}}
             <li>
