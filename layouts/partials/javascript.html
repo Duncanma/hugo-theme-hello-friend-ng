@@ -27,7 +27,12 @@
 			saveData = "off";
 		}
 	}
+	var userAgent = "unknown";
+	if (navigator.userAgent != undefined) {
+		userAgent = navigator.userAgent;
+	}
 	ga('set', 'dimension1', saveData);
+	ga('set', 'dimension2', userAgent);
 	ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
