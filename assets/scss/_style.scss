@@ -8,6 +8,9 @@ ol.recent
     list-style: none;
 }
 
+ol.recent li {
+    padding-bottom: 1vh;
+}
 
 p.toc-heading {
 	font-weight: bold;
