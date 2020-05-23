@@ -9,7 +9,16 @@
                 </div>
             {{- end }}
         </div>
-        <h2>Tech Posts</h2>
+        <h2>Posts about <a href="https://docs.microsoft.com/">Docs</a></h2>
+        <ol class="recent">
+            {{- range where .Site.RegularPages "Params.docsfeatured" true -}}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <!-- <div class="summary">{{.Summary}}</div> -->
+            </li>
+            {{- end -}}
+        </ol>
+        <h2>General Tech Posts</h2>
         <ol class="recent">
             {{- range where .Site.RegularPages "Params.techfeatured" true -}}
             <li>
