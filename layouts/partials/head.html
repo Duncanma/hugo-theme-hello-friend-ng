@@ -9,9 +9,8 @@
 <meta name="description"
     content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="keywords" content="{{ .Site.Params.keywords }}" />
-<meta name="robots" content="noodp" />
+{{ if or (eq .Type "tags") (eq .Type "blog")}}<meta name="robots" content="noindex" />{{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
-
 {{ block "title" . }}
 <title>
     {{ if .IsHome }}
