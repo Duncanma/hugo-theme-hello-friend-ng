@@ -1,13 +1,15 @@
 <meta charset="UTF-8">
 
-{{ if .NextInSection }}<link rel="next" href="{{ .NextInSection.RelPermalink }}">{{ end }}
-{{ if .PrevInSection }}<link rel="prev" href="{{ .PrevInSection.RelPermalink }}">{{ end }}
+{{ if .NextInSection }}
+<link rel="next" href="{{ .NextInSection.RelPermalink }}">{{ end }}
+{{ if .PrevInSection }}
+<link rel="prev" href="{{ .PrevInSection.RelPermalink }}">{{ end }}
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author"
     content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ range .Site.Author }}{{ . }} {{ end }}{{ end }}">
 <meta name="description"
-    content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+    content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}{{ end }}" />
 <meta name="keywords" content="{{ .Site.Params.keywords }}" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
@@ -53,7 +55,7 @@
 
 <!-- JSON Feed -->
 {{ if .OutputFormats.Get "json" }}
-<link href="{{ if .OutputFormats.Get "json" }}{{ .Site.BaseURL }}feed.json{{ end }}" rel="alternate"
+<link href="{{ if .OutputFormats.Get " json" }}{{ .Site.BaseURL }}feed.json{{ end }}" rel="alternate"
     type="application/json" title="{{ .Site.Title }}" />
 {{ end }}
 
@@ -62,9 +64,9 @@
 {{ partial "extra-head.html" . }}
 {{- end }}
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", {{.Site.Params.Clarity}});
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", {{.Site.Params.Clarity }});
 </script>
