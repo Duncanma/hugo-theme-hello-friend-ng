@@ -5,9 +5,10 @@
 {{ $js := slice $menu $theme $main | resources.Concat "js/bundle.js" }}
 {{ $secureJS := $js | resources.Fingerprint "sha512" }}
 {{ $secureBaguette := $baguette | resources.Fingerprint "sha512"}}
+<!--<script>{{ $js.Content | safeJS }}</script>-->
 <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>
 {{ if in .Content "lightbox" }}
-<script type="text/javascript" src="{{ $secureBaguette.RelPermalink }}" integrity="{{ $secureBaguette.Data.Integrity }}" async defer></script>
+<script type="text/javascript" src="{{ $secureBaguette.RelPermalink }}" integrity="{{ $secureBaguette.Data.Integrity }}" defer></script>
 {{ end }}
 {{ range $val := $.Site.Params.customJS }}
 	{{ if gt (len $val) 0 }}
