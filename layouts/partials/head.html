@@ -31,7 +31,6 @@
 
 {{if true }}
     {{ with resources.Get "css/min.css" | resources.Minify }} <style>{{ .Content | safeCSS }}</style> {{ end }}
-    <link rel="prefetch" href="{{ $style.RelPermalink }}">
 {{ else }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
