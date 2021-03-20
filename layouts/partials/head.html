@@ -29,7 +29,7 @@
 {{ end }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 
-{{if true }}
+{{if .IsHome }}
     {{ with resources.Get "css/min.css" | resources.Minify }} <style>{{ .Content | safeCSS }}</style> {{ end }}
 {{ else }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">

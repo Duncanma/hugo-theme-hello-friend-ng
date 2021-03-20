@@ -1,12 +1,5 @@
-{{ $main := resources.Get "js/main.js" }}
-{{ $menu := resources.Get "js/menu.js" }}
-{{ $theme := resources.Get "js/theme.js" }}
 {{ $baguette := resources.Get "js/baguetteBox.js"}}
-{{ $js := slice $menu $theme $main | resources.Concat "js/bundle.js" }}
-{{ $secureJS := $js | resources.Fingerprint "sha512" }}
 {{ $secureBaguette := $baguette | resources.Fingerprint "sha512"}}
-<script>{{ $js.Content | safeJS }}</script>
-<!--<script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}" async></script>-->
 {{ if in .Content "lightbox" }}
 <script type="text/javascript" src="{{ $secureBaguette.RelPermalink }}" integrity="{{ $secureBaguette.Data.Integrity }}" defer></script>
 {{ end }}

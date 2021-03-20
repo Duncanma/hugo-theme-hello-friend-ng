@@ -1,3 +1,9 @@
+#logoLink {
+  @media #{$media-size-smallest} {
+    display: none;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;

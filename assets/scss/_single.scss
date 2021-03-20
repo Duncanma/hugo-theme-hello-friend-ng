@@ -116,7 +116,7 @@
       letter-spacing: .1em;
       z-index: 1;
 
-      .dark-theme & {
+      @media(prefers-color-scheme: dark) {
         background: $dark-background;
         color: $dark-color-secondary;
       }
@@ -158,7 +158,7 @@
   cursor: pointer;
   appearance: none;
 
-  .dark-theme & {
+  @media(prefers-color-scheme: dark) {
     background: $dark-background-secondary;
   }
 
