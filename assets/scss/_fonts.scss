@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
-  font-display: swap;
+  font-display: fallback;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'),
        url('../fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
